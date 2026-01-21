@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>القرآن الكريم - ماهر المعيقلي</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Sans+Arabic:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --emerald-primary: #065f46;
+        --tv-focus-color: #10b981;
+      }
+      body {
+        font-family: 'Noto+Sans+Arabic', sans-serif;
+        background-color: #020617; /* لون داكن مريح لشاشات التلفزيون */
+        color: white;
+        overflow-x: hidden;
+        -webkit-tap-highlight-color: transparent;
+        /* منع اختيار النصوص لتسهيل تجربة التلفزيون */
+        user-select: none;
+      }
+      .quran-font {
+        font-family: 'Amiri', serif;
+      }
+      /* تحسين مؤشر التركيز للريموت */
+      *:focus-visible {
+        outline: none !important;
+        border-color: var(--tv-focus-color) !important;
+        box-shadow: 0 0 25px rgba(16, 185, 129, 0.6) !important;
+        transform: scale(1.05);
+        z-index: 50;
+      }
+      
+      /* سلاسة الحركة عند التنقل بالريموت */
+      * {
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      /* تحسينات التلفزيون (Overscan Safe Area) */
+      @media (min-width: 1280px) {
+        body {
+          padding: 3rem; /* هامش أمان للتلفزيون */
+        }
+      }
+
+      /* إخفاء شريط التمرير الافتراضي */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0f172a;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #1e293b;
+        border-radius: 5px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--tv-focus-color);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.38.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
